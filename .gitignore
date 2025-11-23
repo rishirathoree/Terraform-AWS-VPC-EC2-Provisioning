@@ -1,0 +1,20 @@
+# Ignore node modules
+node_modules/
+
+# Ignore VM Files
+vm
+
+# Ignore Terraform provider binaries and local state
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform.lock.hcl
+
+# Keep your Terraform config files
+!main.tf
+!variables.tf
+!terraform.tfvars
+!outputs.tf
+!provider.tf  # if you have this
+!*.tfvars     # optional
