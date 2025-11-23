@@ -49,11 +49,19 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
- go to your **AWS Console → EC2 → Instances** and check the
-Public IP of the running instance.
+Once Terraform completes, go to your **AWS Console → EC2 → Instances**
+and check the **Public IP** of the running instance.
 
-execute the cmd :
+To access your EC2 machine:
+
 ``` sh
-ssh -i mykey ubuntu@yourip
-./setup.sh
+ssh -i mykey ubuntu@YOUR_PUBLIC_IP
+```
+
+## 🧹 Cleanup
+
+After using the server, remove all Terraform-created resources:
+
+``` sh
+terraform destroy --auto-approve
 ```
